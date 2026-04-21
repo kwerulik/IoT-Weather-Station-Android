@@ -11,7 +11,7 @@ Adafruit_BMP085 bmp;
 // --- DANE SIECI I THINGSPEAK ---
 const String ssid = "NAZWA_TWOJEGO_WIFI";
 const String password = "HASLO_DO_WIFI";
-const String apiKey = "WQGFK92TDNNE34WA";
+const String apiKey = "TWÓJ_API_KEY_THINGSPEAK";
 const String host = "api.thingspeak.com";
 
 // --- PINY WYŚWIETLACZA 7-SEGMENTOWEGO ---
