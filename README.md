@@ -1,16 +1,42 @@
-## 🔌 Schemat Połączeń (Pinout)
+# 📱 IoT Weather Station - Android Mobile Application
 
-| Komponent | Pin Czujnika / Wyświetlacza | Pin Arduino | Uwagi Zasilania |
-| :--- | :--- | :--- | :--- |
-| **DHT22** (Temperatura/Wilg.) | DATA (OUT) | **D2** | VCC ➡️ 5V, GND ➡️ GND |
-| **MQ-135** (Jakość Powietrza) | A0 (Analog Out) | **A0** | VCC ➡️ 5V, GND ➡️ GND |
-| **BMP280** (Ciśnienie) | SDA | **SDA** (lub A4) | ⚠️ VCC ➡️ **3.3V**, GND ➡️ GND |
-| | SCL | **SCL** (lub A5) | |
-| **Wyświetlacz 5161AS** | COM (Wspólna Katoda) | **GND** | *Koniecznie przez rezystor 220-330Ω!* |
-| | Segment A (Góra, pin 4) | **D5** | |
-| | Segment B (Góra, pin 5) | **D6** | |
-| | Segment C (Dół, pin 4) | **D7** | |
-| | Segment D (Dół, pin 2) | **D8** | |
-| | Segment E (Dół, pin 1) | **D9** | |
-| | Segment F (Góra, pin 2) | **D10** | |
-| | Segment G (Góra, pin 1) | **D11** | |
+This repository contains the mobile application for the **IoT Weather Station** system. The app connects to the **ThingSpeak API** to provide real-time monitoring, historical data visualization, and smart environmental alerts.
+
+## 🌟 Key Features
+* **Real-time Dashboard:** Instant access to temperature, humidity, atmospheric pressure, and air quality.
+* **Interactive Charts:** Detailed historical data analysis using `MPAndroidChart`.
+* **Smart Alerts:** Push notifications for extreme temperatures and dangerous air quality levels.
+* **Environmental Insights:** Intelligent tips on whether to ventilate the room or use a humidifier.
+* **Modern UI:** Clean, card-based interface with dynamic data updates.
+
+## 📸 Screenshots
+
+| Main Dashboard | Temperature Analytics | Humidity Trends |
+|:---:|:---:|:---:|
+| ![Main](screenshots/main.png) | ![Temp](screenshots/temperature.png) | ![Hum](screenshots/humidity.png) |
+
+| Air Quality & Smog | Pressure History | Weather Report |
+|:---:|:---:|:---:|
+| ![Air](screenshots/air_quality.png) | ![Pressure](screenshots/pressure.png) | ![Report](screenshots/raport.png) |
+
+## 🛠️ Tech Stack
+* **Language:** Java
+* **Platform:** Android Studio
+* **Networking:** Volley Library (REST API calls)
+* **Data Visualization:** MPAndroidChart
+* **Backend:** ThingSpeak Cloud
+
+## 🚦 Smart Thresholds & Alarms
+The application monitors the following safety ranges:
+* **Temperature:** Alerts if < 19°C or > 25°C.
+* **Humidity:** Alerts if < 40% or > 60%.
+* **Air Quality:** Real-time smog detection based on MQ-135 sensor readings.
+
+## ⚙️ Setup & Installation
+1.  Clone this repository.
+2.  Open the `mobile_app` folder in **Android Studio**.
+3.  Configure your **ThingSpeak Channel ID** and **Read API Key** in `MainActivity.java`.
+4.  Build and run the APK on your Android device (Minimum SDK: 24).
+
+---
+*Developed as part of an IoT monitoring system project.*
