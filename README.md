@@ -1,6 +1,10 @@
 # 📱 IoT Weather Station - Android Mobile Application
 
-This repository contains the mobile application for the **IoT Weather Station** system. The app connects to the **ThingSpeak API** to provide real-time monitoring, historical data visualization, and smart environmental alerts.
+This repository contains the mobile application for the **IoT Weather Station** system. The app connects to the **ThingSpeak API** to provide real-time monitoring, historical data visualization, and smart environmental alerts based on data collected by custom Arduino hardware.
+
+## 🔌 Hardware Companion
+This mobile app is the front-end interface for a physical IoT weather station. You can find the C++ code, sensor configurations, and hardware setup instructions in the companion repository:
+👉 **[Arduino Simple Weather Station Repository](https://github.com/WhiteRed14/Arduino_simple_weather_station)**
 
 ## 🌟 Key Features
 * **Real-time Dashboard:** Instant access to temperature, humidity, atmospheric pressure, and air quality.
